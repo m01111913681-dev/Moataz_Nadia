@@ -254,6 +254,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+  direction: ltr;
 }
 
 .count-item {
@@ -343,3 +344,4 @@ section {
     width: 360px;
   }
 }
+
