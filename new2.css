@@ -17,7 +17,6 @@ body {
   color: #fdf7f8;
 }
 
-
 /* الحاوية الرئيسية */
 .page {
   min-height: 100vh;
@@ -33,15 +32,21 @@ body {
 }
 
 .logo-circle {
-  width: 260px;            /* كبرت الدايرة */
-  height: 260px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
-  position: relative;
+  overflow: hidden; /* مهم علشان تبقى جوه الدايرة */
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* تخليها مظبوطة */
 }
 
 .logo-initials {
@@ -51,30 +56,17 @@ body {
   position: relative;
 }
 
-/* حرف N */
-.logo-initials::after {
-  content: "N";
-  position: absolute;
-  top: 18px;        /* نزّله شوية */
-  left: 45px;       /* دخّله جوه الـ M */
-  font-family: "ح", cursive;
-  font-size: 105px;
-  color: #fdf7f8;
-  opacity: 0.92;
-}
-
-
 /* حرف N داخل في الـ M بالـ CSS فقط */
 .logo-initials::after {
   content: "N";
   position: absolute;
   top: 40px;           /* نزّل الـ N سنة بسيطة */
-  left: 50px;         /* حرّكه يمين شوية عشان يدخل في الـ M */
+  left: 50px;          /* حرّكه يمين شوية عشان يدخل في الـ M */
   font-family: "parisienne", cursive;
   font-size: 100px;    /* أصغر سنة من الـ M */
   color: #fdf7f8;
   opacity: 0.95;
-  z-index: -1;        /* يخليه ورا الـ M شوية */
+  z-index: -1;         /* يخليه ورا الـ M شوية */
   transform: scale(0.95);
 }
 
@@ -282,11 +274,63 @@ body {
   letter-spacing: 1px;
 }
 
-/* نخلي كل السكاشن في النص */
+/* سكاشن في النص */
 section {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+}
+
+/* سكشن الـ RSVP */
+.rsvp-section {
+  width: 100%;
+  max-width: 550px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.rsvp-card-wrapper {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 16px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  margin-bottom: 16px;
+}
+
+.rsvp-image {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+.rsvp-btn {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 10px 28px;
+  border-radius: 999px;
+  background: #f5e5cf;
+  color: #6b1632;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+  transition: background 0.15s ease, transform 0.08s ease, box-shadow 0.15s ease;
+}
+
+.rsvp-btn:hover {
+  background: #f0d6b3;
+}
+
+.rsvp-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3) inset;
+}
+
+.rsvp-note {
+  margin-top: 8px;
+  font-size: 13px;
+  opacity: 0.9;
 }
 
 /* للشاشات الأكبر شوية */
