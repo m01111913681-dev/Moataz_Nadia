@@ -33,20 +33,49 @@ body {
 }
 
 .logo-circle {
-  width: 200px;
-  height: 190px;
-  border-radius: 160px;
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  width: 260px;            /* كبرت الدايرة */
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0 auto 20px;
+  position: relative;
 }
 
 .logo-initials {
-  font-family: "Great Vibes", cursive;
-  font-size: 50px;
-  letter-spacing: 1px;
+  font-family: "parisienne", cursive;
+  font-size: 110px;        /* حجم كبير ومناسب */
+  color: #fdf7f8;
+  position: relative;
+}
+
+/* حرف N */
+.logo-initials::after {
+  content: "N";
+  position: absolute;
+  top: 18px;        /* نزّله شوية */
+  left: 45px;       /* دخّله جوه الـ M */
+  font-family: "ح", cursive;
+  font-size: 105px;
+  color: #fdf7f8;
+  opacity: 0.92;
+}
+
+
+/* حرف N داخل في الـ M بالـ CSS فقط */
+.logo-initials::after {
+  content: "N";
+  position: absolute;
+  top: 40px;           /* نزّل الـ N سنة بسيطة */
+  left: 50px;         /* حرّكه يمين شوية عشان يدخل في الـ M */
+  font-family: "parisienne", cursive;
+  font-size: 100px;    /* أصغر سنة من الـ M */
+  color: #fdf7f8;
+  opacity: 0.95;
+  z-index: -1;        /* يخليه ورا الـ M شوية */
+  transform: scale(0.95);
 }
 
 /* Save the date */
@@ -69,8 +98,8 @@ body {
 
 .save-names {
   margin-top: 6px;
-  font-family: "Great Vibes", cursive;
-  font-size: 85px;
+  font-family: "parisienne", cursive;
+  font-size: 42px;
 }
 
 /* الظرف + الفيديو */
@@ -91,8 +120,6 @@ body {
   aspect-ratio: 3 / 4; /* أطول شوية زي اللي في الصورة */
   overflow: hidden;
 }
-
-
 
 /* صورة الظرف */
 .envelope-image {
@@ -118,7 +145,6 @@ body {
 }
 
 /* فيديو الدعوة */
-
 .envelope-video {
   width: 420px;        /* نفس عرض الظرف */
   height: 560px;       /* 3/4 تقريبا */
@@ -128,7 +154,6 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
   object-fit: cover;
 }
-
 
 /* سكشن الـ Venue */
 .venue-section {
@@ -160,7 +185,7 @@ body {
   margin: 0 auto 16px;
   width: 100%;
   max-width: 420px;   /* بدل 320 */
-    height: 200px; 
+  height: 200px;
   border-radius: 14px;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   background: rgba(255, 255, 255, 0.06);
@@ -208,7 +233,6 @@ body {
 
 /* العد التنازلي */
 .countdown-wrapper {
-  
   width: 100%;
   max-width: 550px;   /* بدل 500 */
   margin: 40px auto 0;
@@ -221,7 +245,6 @@ body {
   padding: 20px 18px 22px;
   text-align: center;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
-
 }
 
 .countdown-title {
@@ -266,7 +289,6 @@ section {
   margin: 0 auto;
 }
 
-
 /* للشاشات الأكبر شوية */
 @media (min-width: 768px) {
   .page {
@@ -277,4 +299,3 @@ section {
     width: 360px;
   }
 }
-
