@@ -21,63 +21,55 @@
     <!-- لوجو بسيط بالأحرف -->
     <header class="top-logo">
       <div class="logo-circle">
-        <span class="logo-initials">M</span>
+        <img src="mn-logo.png" class="logo-img" alt="MN Logo">
       </div>
     </header>
 
-    <!-- Save the date -->
+    <!-- Save the date + الظرف -->
     <section class="save-date-section">
- <p class="save-names">Moataz  &amp;  Nadia</p>
-      
+      <p class="save-names">Moataz  &amp;  Nadia</p>
 
-    <!-- الظرف بالصور -->
-    <section class="envelope-section">
-  <div class="envelope-wrapper" id="envelopeWrapper">
-    <img
-      src="ChatGPT Image Nov 29, 2025, 03_32_28 AM.png"
-      class="envelope-image"
-      alt="Closed Envelope"
-    />
-    <!-- منطقة الضغط على الختم -->
-    <div class="seal-click" id="sealClick"></div>
-  </div>
+      <!-- الظرف بالصور / الفيديو -->
+      <section class="envelope-section">
+        <div class="envelope-wrapper" id="envelopeWrapper">
+          <img
+            src="ChatGPT Image Nov 29, 2025, 03_32_28 AM.png"
+            class="envelope-image"
+            alt="Closed Envelope"
+          />
+          <!-- منطقة الضغط على الختم -->
+          <div class="seal-click" id="sealClick"></div>
+        </div>
 
-  <!-- فيديو فتح الظرف وخروج الدعوة (الفيديو نفسه هو الدعوة) -->
-  <video
-    id="envelopeVideo"
-    class="envelope-video"
-    preload="auto"
-    playsinline
-  >
-    <source src="open.mp4" type="video/mp4" />
-    متصفحك لا يدعم تشغيل الفيديو.
-  </video>
-</section>
+        <!-- فيديو فتح الظرف وخروج الدعوة -->
+        <video
+          id="envelopeVideo"
+          class="envelope-video"
+          preload="auto"
+          playsinline
+        >
+          <source src="open.mp4" type="video/mp4" />
+          متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+      </section>
 
-<h1 class="save-title">Save the Date</h1>
-      <h1 class="save-title">   25</h1>
-<h1 class="save-title">   December  </h1>
-<h1 class="save-title">     2025 </h1>
-
-
-     
+      <h1 class="save-title">Save the Date</h1>
+      <h1 class="save-title">25</h1>
+      <h1 class="save-title">December</h1>
+      <h1 class="save-title">2025</h1>
     </section>
 
-    
     <!-- سكشن الـ Venue المستقل -->
     <section class="venue-section">
       <div class="venue-card">
         <h2 class="venue-heading">Venue</h2>
         <p class="venue-subtitle">Horus Hall - Artillery House</p>
 
-<!-- صورة القاعة -->
-<div class="venue-illustration">
-  <img src="venue.png" class="venue-image" alt="Venue Image" />
-</div>
-</div>
+        <!-- صورة القاعة -->
+        <div class="venue-illustration">
+          <img src="venue.png" class="venue-image" alt="Venue Image" />
+        </div>
 
-
-       
         <a
           class="venue-location-btn"
           href="https://www.google.com/maps/search/?api=1&query=%D9%82%D8%A7%D8%B9%D8%A9+-%D8%AD%D9%88%D8%B1%D8%B3-+%D8%AF%D8%A7%D8%B1+%D8%A7%D9%84%D9%85%D8%AF%D9%81%D8%B9%D9%8A%D8%A9"
@@ -86,16 +78,13 @@
         >
           Click for location
         </a>
-
       </div>
     </section>
 
-
     <!-- العد التنازلي -->
     <section class="countdown-wrapper">
-
       <div class="countdown-card">
- <h1 class="save-title">Thursday at 6:00 pm</h1>
+        <h1 class="save-title">Thursday at 6:00 pm</h1>
         <h2 class="countdown-title">Days Left</h2>
         <p class="countdown-subtitle">❤️ For Our Day</p>
 
@@ -120,81 +109,98 @@
       </div>
     </section>
 
+    <!-- سكشن الـ RSVP الجديد -->
+    <section class="rsvp-section">
+      <div class="rsvp-card-wrapper">
+        <!-- حط هنا اسم صورة الـ RSVP اللي عملناها (غيّر الاسم لو مختلف) -->
+        <img src="ChatGPT Image Nov 29, 2025, 09_14_23 PM.png" alt="RSVP Card" class="rsvp-image">
+      </div>
+
+      <a
+        class="rsvp-btn"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfzoAWnsAp6I66UxWGJJ-xmnAPvccOeKJ3iqCFzjagv_PDqUA/viewform?usp=dialog"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Click to RSVP
+      </a>
+      
+    </section>
+
   </div>
 
   <!-- سكربت فتح الظرف + العد التنازلي -->
   <script>
-  // عناصر الظرف والفيديو
-  const envelopeWrapper = document.getElementById("envelopeWrapper");
-  const sealClick = document.getElementById("sealClick");
-  const envelopeVideo = document.getElementById("envelopeVideo");
+    // عناصر الظرف والفيديو
+    const envelopeWrapper = document.getElementById("envelopeWrapper");
+    const sealClick = document.getElementById("sealClick");
+    const envelopeVideo = document.getElementById("envelopeVideo");
 
-const VIDEO_START_AT = 0.3;  // عدد الثواني قبل ما الورقة تطلع (عدّل الرقم اللي يناسب الفيديو)
+    const VIDEO_START_AT = 0.3;  // ثواني قبل ما الورقة تطلع (عدّل الرقم لو حابب)
 
-function openInvite() {
-  if (!envelopeVideo) return;
-  envelopeWrapper.style.display = "none";
-  envelopeVideo.style.display = "block";
+    function openInvite() {
+      if (!envelopeVideo) return;
+      envelopeWrapper.style.display = "none";
+      envelopeVideo.style.display = "block";
 
-  // نبدأ من لحظة خروج الورقة
-  envelopeVideo.currentTime = VIDEO_START_AT;
-  envelopeVideo.play();
-}
-
-  // لما تدوس على الختم
-  if (sealClick) {
-    sealClick.addEventListener("click", openInvite);
-  }
-
-  // احتياطياً: لو حد دس في أي حتة في الظرف نفسه
-  if (envelopeWrapper) {
-    envelopeWrapper.addEventListener("click", openInvite);
-  }
-
-  // لما الفيديو يخلص ننزل للـ Venue (اختياري)
-  if (envelopeVideo) {
-    envelopeVideo.addEventListener("ended", () => {
-      const venueSection = document.querySelector(".venue-section");
-      if (venueSection) {
-        venueSection.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  }
-
-  // عد تنازلي لـ 25/12/2025 الساعة 18:00
-  const countDownDate = new Date("2025-12-25T18:00:00+02:00").getTime();
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = countDownDate - now;
-
-    const daysEl = document.getElementById("days");
-    const hoursEl = document.getElementById("hours");
-    const minutesEl = document.getElementById("minutes");
-    const secondsEl = document.getElementById("seconds");
-
-    if (distance <= 0) {
-      daysEl.textContent = "00";
-      hoursEl.textContent = "00";
-      minutesEl.textContent = "00";
-      secondsEl.textContent = "00";
-      return;
+      // نبدأ من لحظة خروج الورقة
+      envelopeVideo.currentTime = VIDEO_START_AT;
+      envelopeVideo.play();
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // لما تدوس على الختم
+    if (sealClick) {
+      sealClick.addEventListener("click", openInvite);
+    }
 
-    daysEl.textContent = String(days).padStart(2, "0");
-    hoursEl.textContent = String(hours).padStart(2, "0");
-    minutesEl.textContent = String(minutes).padStart(2, "0");
-    secondsEl.textContent = String(seconds).padStart(2, "0");
-  }
+    // احتياطياً: لو حد دس في أي حتة في الظرف نفسه
+    if (envelopeWrapper) {
+      envelopeWrapper.addEventListener("click", openInvite);
+    }
 
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
+    // لما الفيديو يخلص ننزل للـ Venue
+    if (envelopeVideo) {
+      envelopeVideo.addEventListener("ended", () => {
+        const venueSection = document.querySelector(".venue-section");
+        if (venueSection) {
+          venueSection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    }
 
+    // عد تنازلي لـ 25/12/2025 الساعة 18:00
+    const countDownDate = new Date("2025-12-25T18:00:00+02:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      if (distance <= 0) {
+        daysEl.textContent = "00";
+        hoursEl.textContent = "00";
+        minutesEl.textContent = "00";
+        secondsEl.textContent = "00";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.textContent = String(days).padStart(2, "0");
+      hoursEl.textContent = String(hours).padStart(2, "0");
+      minutesEl.textContent = String(minutes).padStart(2, "0");
+      secondsEl.textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
