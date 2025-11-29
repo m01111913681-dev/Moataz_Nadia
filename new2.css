@@ -254,7 +254,10 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
-  direction: ltr;
+  
+    direction: ltr;
+  
+  
 }
 
 .count-item {
@@ -344,4 +347,61 @@ section {
     width: 360px;
   }
 }
+/* زرار وسهم يوجّه الضيف إنه يضغط على الظرف */
+.envelope-section {
+  position: relative;
+}
 
+.envelope-hint {
+  margin-top: 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-family: 'alex brush', cursive, sans-serif;
+  font-size: 40px;
+  color: #fdf7f8;
+}
+
+/* السهم اللي بيشاور على الظرف */
+.hint-arrow {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 18px solid #f5e5cf; /* لون فاتح يمشي مع التصميم */
+  animation: arrow-bounce 1s infinite;
+}
+
+/* الزرار نفسه */
+.hint-button {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  padding: 6px 18px;
+  background: transparent;
+  color: #fdf7f8;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.15s ease, transform 0.08s ease,
+    box-shadow 0.15s ease;
+}
+
+.hint-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hint-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) inset;
+}
+
+/* حركة بسيطة للسهم */
+@keyframes arrow-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
