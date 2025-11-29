@@ -1,0 +1,279 @@
+/* ضبط عام */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Cairo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #320812;   /* لون واحد للموقع كله */
+  color: #fdf7f8;
+}
+
+
+/* الحاوية الرئيسية */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 12px 48px;
+}
+
+/* اللوجو */
+.top-logo {
+  margin-bottom: 16px;
+}
+
+.logo-circle {
+  width: 200px;
+  height: 190px;
+  border-radius: 160px;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.logo-initials {
+  font-family: "Great Vibes", cursive;
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+/* Save the date */
+.save-date-section {
+  text-align: center;
+  margin-bottom: 28px; /* مسافة أكبر */
+}
+
+.save-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.save-date {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.save-names {
+  margin-top: 6px;
+  font-family: "Great Vibes", cursive;
+  font-size: 80px;
+}
+
+/* الظرف + الفيديو */
+.envelope-section {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.envelope-wrapper {
+  position: relative;
+  width: 420px;        /* كبرنا العرض */
+  max-width: 100%;
+  aspect-ratio: 3 / 4; /* أطول شوية زي اللي في الصورة */
+  overflow: hidden;
+}
+
+
+
+/* صورة الظرف */
+.envelope-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* منطقة الضغط على الختم */
+.seal-click {
+  position: absolute;
+  bottom: 28%;     /* نزّلها أو ارفعها حسب مكان الختم */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;     /* حجم دائرة اللمس */
+  height: 90px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  background: rgba(255, 0, 0, 0); /* شفاف بالكامل */
+}
+
+/* فيديو الدعوة */
+
+.envelope-video {
+  width: 420px;        /* نفس عرض الظرف */
+  height: 560px;       /* 3/4 تقريبا */
+  max-width: 100%;
+  border-radius: 18px;
+  display: none;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  object-fit: cover;
+}
+
+
+/* سكشن الـ Venue */
+.venue-section {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.venue-card {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 18px 16px 20px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+}
+
+.venue-heading {
+  font-family: "Great Vibes", cursive;
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.venue-subtitle {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.venue-illustration {
+  margin: 0 auto 16px;
+  width: 100%;
+  max-width: 420px;   /* بدل 320 */
+    height: 200px; 
+  border-radius: 14px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.venue-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* خليها cover لو عايزها تملى البوكس */
+  opacity: 0.9;
+}
+
+.venue-time {
+  font-size: 12px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+/* زر اللوكيشن تحت */
+.venue-location-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: #f5e5cf;
+  color: #6b1632;
+  text-decoration: none;
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  transition: background 0.15s ease, transform 0.08s ease,
+    box-shadow 0.15s ease;
+}
+
+.venue-location-btn:hover {
+  background: #f0d6b3;
+}
+
+.venue-location-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) inset;
+}
+
+/* العد التنازلي */
+.countdown-wrapper {
+  
+  width: 100%;
+  max-width: 550px;   /* بدل 500 */
+  margin: 40px auto 0;
+}
+
+.countdown-card {
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 20px 18px 22px;
+  text-align: center;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+
+}
+
+.countdown-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 28px;
+  margin-bottom: 2px;
+}
+
+.countdown-subtitle {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.count-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 8px 4px;
+}
+
+.count-number {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.count-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* نخلي كل السكاشن في النص */
+section {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+
+/* للشاشات الأكبر شوية */
+@media (min-width: 768px) {
+  .page {
+    padding-top: 32px;
+  }
+
+  .envelope-wrapper {
+    width: 360px;
+  }
+}
