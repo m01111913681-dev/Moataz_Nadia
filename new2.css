@@ -91,12 +91,12 @@ body {
 .save-names {
   margin-top: 6px;
   font-family: "parisienne", sans-serif;
-  font-size: 45px;
+  font-size: 40px;
 }
 .save-names1 {
   margin-top: 6px;
   font-family: "normal", sans-serif;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 
@@ -439,6 +439,7 @@ section {
   font-weight: bold;
   font-size: 22px;
 }
+
 
 
 
