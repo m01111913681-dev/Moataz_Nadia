@@ -95,13 +95,13 @@ body {
 }
 .save-names1 {
   margin-top: 6px;
-  font-family: "lucida handwriting", cursive;
-  font-size: 42px;
+  font-family: "great vibs", cursive;
+  font-size: 50px;
 }
 .save-names2 {
   margin-top: 6px;
   font-family: "work sans", cursive;
-  font-size: 42px;
+  font-size: 48px;
 }
 
 /* الظرف + الفيديو */
@@ -443,4 +443,5 @@ section {
   font-weight: bold;
   font-size: 22px;
 }
+
 
