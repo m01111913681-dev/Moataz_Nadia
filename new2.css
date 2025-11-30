@@ -405,3 +405,29 @@ section {
     transform: translateY(-6px);
   }
 }
+.made-with-love {
+  position: fixed;         /* ثابت في أسفل الصفحة */
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Times New Roman", serif; /* غيّر الخط لو حابب */
+  font-size: 14px;
+  color: #ffffff;          /* لون الخط */
+  z-index: 9999;
+}
+
+.mw-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ffffff; /* لون إطار الدائرة */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
