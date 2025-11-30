@@ -455,25 +455,10 @@ section {
   font-family: 'Times New Roman', serif;
 }
 
-/* الدائرة */
-.footer-circle {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid #f5e6d3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 18px;
-  
+.site-footer{
+  text-align: center;
 }
 
-/* النص */
-.footer-text {
-  font-size: 15px;
-  letter-spacing: 0.5px;
-}
 
 
 
