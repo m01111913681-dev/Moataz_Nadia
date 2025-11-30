@@ -100,7 +100,7 @@ body {
 }
 .save-names2 {
   margin-top: 6px;
-  font-family: "work sans", cursive;
+  font-family: "normal", cursive;
   font-size: 48px;
 }
 
@@ -443,5 +443,6 @@ section {
   font-weight: bold;
   font-size: 22px;
 }
+
 
 
