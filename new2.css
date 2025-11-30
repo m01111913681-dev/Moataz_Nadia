@@ -95,14 +95,10 @@ body {
 }
 .save-names1 {
   margin-top: 6px;
-  font-family: "great vibs", cursive;
+  font-family: "normal", cursive;
   font-size: 50px;
 }
-.save-names2 {
-  margin-top: 6px;
-  font-family: "dancing script", sans-serif;
-  font-size: 48px;
-}
+
 
 /* الظرف + الفيديو */
 .envelope-section {
@@ -443,6 +439,7 @@ section {
   font-weight: bold;
   font-size: 22px;
 }
+
 
 
 
